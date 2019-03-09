@@ -4,6 +4,7 @@ import UIKit
 class SomeExercisesTableViewController: UITableViewController {
     
     var hz = GlobalArr()
+    var data = [""]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,14 +15,15 @@ class SomeExercisesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hz.globalArr.count
+        return data.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = hz.globalArr[indexPath.row]
+        cell.textLabel?.text = data[indexPath.row]
 
+        
         return cell
     }
     
@@ -72,3 +74,5 @@ class SomeExercisesTableViewController: UITableViewController {
     */
 
 }
+
+
