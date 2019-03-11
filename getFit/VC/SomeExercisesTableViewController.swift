@@ -3,7 +3,6 @@ import UIKit
 
 class SomeExercisesTableViewController: UITableViewController {
     
-    var hz = GlobalArr()
     var data = [""]
 
     override func viewDidLoad() {

@@ -4,7 +4,6 @@ import UIKit
 class ExercisesTableViewController: UITableViewController {
     
     var test = ["A", "B", "C", "D"]
-    var hz = GlobalArr()
     
     
     override func viewDidLoad() {
@@ -31,37 +30,34 @@ class ExercisesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let numberOfCell = tableView.indexPathForSelectedRow
+        let someVC = storyboard.instantiateViewController(withIdentifier: "someVC") as! SomeExercisesTableViewController
+        
+        guard let numberOfCell = tableView.indexPathForSelectedRow?[indexPath.row] else { return }
         
         
-        switch numberOfCell![indexPath.row] {
+        switch numberOfCell {
         case 0:
-            let someVC = storyboard.instantiateViewController(withIdentifier: "someVC") as! SomeExercisesTableViewController
             self.present(someVC, animated: true, completion: nil)
             someVC.data = A.arr
+            print("numberOfCell \(numberOfCell)")
             
         case 1:
-            let someVC = storyboard.instantiateViewController(withIdentifier: "someVC") as! SomeExercisesTableViewController
             self.present(someVC, animated: true, completion: nil)
             someVC.data = B.arr
+            print("numberOfCell \(numberOfCell)")
             
         case 2:
-            let someVC = storyboard.instantiateViewController(withIdentifier: "someVC") as! SomeExercisesTableViewController
-            self.present(someVC, animated: true, completion: nil)
-            someVC.data = C.arr
+//            self.present(someVC, animated: true, completion: nil)
+//            someVC.data = C.arr
+            print("numberOfCell \(numberOfCell)")
             
         case 3:
-            let someVC = storyboard.instantiateViewController(withIdentifier: "someVC") as! SomeExercisesTableViewController
             self.present(someVC, animated: true, completion: nil)
             someVC.data = A.arr
-            
+            print("numberOfCell \(numberOfCell)")
         default:
-            print("opa")
+            print("error")
         }
-        
-//       
-        
-        
     }
     
     
