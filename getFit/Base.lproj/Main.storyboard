@@ -14,13 +14,13 @@
         <scene sceneID="x1p-GT-xTd">
             <objects>
                 <tableViewController storyboardIdentifier="exerVC" id="Stz-sX-aJV" customClass="ExercisesTableViewController" customModule="getFit" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hax-ss-lnc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Hax-ss-lnc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="cxo-C8-cC9">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cxo-C8-cC9" id="w8y-5a-DYB">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -54,7 +54,7 @@
                                 <navigationItem title="Title" id="FEi-rr-T51">
                                     <barButtonItem key="leftBarButtonItem" title="Back" id="SNA-a9-ZMS">
                                         <connections>
-                                            <segue destination="Stz-sX-aJV" kind="show" id="TKf-ZU-drA"/>
+                                            <segue destination="Crr-wt-RXt" kind="show" id="pAN-a4-d5y"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
@@ -145,7 +145,4 @@
             <point key="canvasLocation" x="-524" y="-578.86056971514245"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="TKf-ZU-drA"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -8,6 +8,7 @@ class ExercisesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        StorageExercises.getExercises()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -15,15 +16,22 @@ class ExercisesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return test.count
+        //return test.count
+        return StorageExercises.exercises.count
+    }
+    
+    override  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 138
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.textLabel?.text = test[indexPath.row]
-        
+        //cell.textLabel?.text = test[indexPath.row]
+        cell.textLabel?.text = Array(StorageExercises.exercises.keys)[indexPath.row]
+        cell.imageView?.image = Array(StorageExercises.exercises.values)[indexPath.row]
         return cell
     }
     
@@ -32,29 +40,23 @@ class ExercisesTableViewController: UITableViewController {
         
         let someVC = storyboard.instantiateViewController(withIdentifier: "someVC") as! SomeExercisesTableViewController
         
-        guard let numberOfCell = tableView.indexPathForSelectedRow?[indexPath.row] else { return }
         
-        
-        switch numberOfCell {
+        switch indexPath.row {
         case 0:
             self.present(someVC, animated: true, completion: nil)
             someVC.data = A.arr
-            print("numberOfCell \(numberOfCell)")
-            
+
         case 1:
             self.present(someVC, animated: true, completion: nil)
             someVC.data = B.arr
-            print("numberOfCell \(numberOfCell)")
             
         case 2:
-//            self.present(someVC, animated: true, completion: nil)
-//            someVC.data = C.arr
-            print("numberOfCell \(numberOfCell)")
+            self.present(someVC, animated: true, completion: nil)
+            someVC.data = C.arr
             
         case 3:
             self.present(someVC, animated: true, completion: nil)
             someVC.data = A.arr
-            print("numberOfCell \(numberOfCell)")
         default:
             print("error")
         }

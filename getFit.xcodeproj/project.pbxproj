@@ -13,6 +13,7 @@
 		ACBC3378222588B5007EB1C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBC3376222588B5007EB1C3 /* LaunchScreen.storyboard */; };
 		ACBC338022258A80007EB1C3 /* ExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC337F22258A80007EB1C3 /* ExercisesTableViewController.swift */; };
 		ACBC338422258B86007EB1C3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC338322258B86007EB1C3 /* Data.swift */; };
+		ACCED2F522368E0300E248CD /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCED2F422368E0300E248CD /* Storage.swift */; };
 		ACFE03D62226C6EB008C79D7 /* SomeExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE03D52226C6EB008C79D7 /* SomeExercisesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		ACBC3379222588B5007EB1C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACBC337F22258A80007EB1C3 /* ExercisesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesTableViewController.swift; sourceTree = "<group>"; };
 		ACBC338322258B86007EB1C3 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		ACCED2F422368E0300E248CD /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		ACFE03D52226C6EB008C79D7 /* SomeExercisesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeExercisesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 		ACBC338222258B55007EB1C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ACCED2F422368E0300E248CD /* Storage.swift */,
 				ACBC338322258B86007EB1C3 /* Data.swift */,
 			);
 			path = Model;
@@ -161,6 +164,7 @@
 				ACBC338422258B86007EB1C3 /* Data.swift in Sources */,
 				ACBC336E222588B1007EB1C3 /* AppDelegate.swift in Sources */,
 				ACFE03D62226C6EB008C79D7 /* SomeExercisesTableViewController.swift in Sources */,
+				ACCED2F522368E0300E248CD /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
