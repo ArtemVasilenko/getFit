@@ -3,12 +3,16 @@ import UIKit
 
 class ExercisesTableViewController: UITableViewController {
     
-    var test = ["A", "B", "C", "D"]
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         StorageExercises.getExercises()
+        tableView.reloadInputViews()
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        tableView.reloadData()
+//        tableView.reloadInputViews()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -17,7 +21,7 @@ class ExercisesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return test.count
-        return StorageExercises.exercises.count
+        return StorageExercises.exercisesImages.count
     }
     
     override  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -29,9 +33,26 @@ class ExercisesTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        //cell.textLabel?.text = test[indexPath.row]
-        cell.textLabel?.text = Array(StorageExercises.exercises.keys)[indexPath.row]
-        cell.imageView?.image = Array(StorageExercises.exercises.values)[indexPath.row]
+        
+        
+        //cell.textLabel?.lineBreakMode = .byCharWrapping
+        let label = UILabel(frame: CGRect(x: 70, y: 70, width: cell.frame.width, height: 36))
+        label.textColor = .red
+        label.tintColor = .black
+        label.font = UIFont(name: "Verdana", size: 36)
+        label.text = StorageExercises.exercisesNames[indexPath.row]
+//        cell.addSubview(label)
+        //StorageExercises.exercisesNames.removeAll()
+//        tableView.reloadData()
+        
+//        cell.
+        
+        
+        
+       // cell.textLabel?.text = Array(StorageExercises.exercises.keys)[indexPath.row]
+//        cell.imageView?.image = Array(StorageExercises.exercises.values)[indexPath.row]
+        cell.imageView?.image = StorageExercises.exercisesImages[indexPath.row]
+        
         return cell
     }
     
